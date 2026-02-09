@@ -1,8 +1,38 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>Home page</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Doloribus, voluptate. Doloribus,
-        voluptate. Dol</p>
-    {{$names}}
+    {{-- {{ $names }} --}}
+    <div class="card col-md-6 mx-auto">
+        <div class="card-body">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <label for="note">Note</label>
+                            <input type="text" name="note" class="form-control" placeholder="enter your notes">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary mt-4">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <table class="table mt-4">
+                <thead>
+                    <tr>
+                        <th>note</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>test</td>
+                        <td>
+                            <a href="">Delete</a> | <a href="">Edit</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 @endsection
