@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 
+Route::post('/save', [HomeController::class, 'save']);
+
 route::get('/about', [AboutController::class, 'index']);
 
 route::get('/contact',[ContactController::class,'index']);
