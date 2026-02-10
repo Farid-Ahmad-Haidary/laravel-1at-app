@@ -10,7 +10,9 @@ class HomeController extends Controller
     public function index()
     {
         $names = 'Farid Ahmad Haidary';
-        return view('Home')->with('names', $names);
+        return view('Home')
+        ->with('names', $names)
+        ->with('notes', Note::all());
     }
 
 

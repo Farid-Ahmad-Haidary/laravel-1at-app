@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-md-10">
                         <div class="form-group">
-                            <label for="note">Note</label>
+                            <label for="note">Notes</label>
                             <input type="text" name="note" class="form-control" placeholder="enter your notes">
                             @error('note')
                                 <div class="text-danger">{{ $message }}</div>
@@ -29,11 +29,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>test</td>
-                        <td>
-                            <a href="">Delete</a> | <a href="">Edit</a>
-                        </td>
+
+                    @foreach ($notes as $item)
+                        <tr>
+                            <td>{{ $item->note }}</td>
+                            <td>
+                                <a href="">Delete</a> | <a href="">Edit</a>
+                            </td>
+                    @endforeach
                     </tr>
                 </tbody>
             </table>
