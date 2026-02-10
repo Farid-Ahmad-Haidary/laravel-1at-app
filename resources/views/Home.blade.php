@@ -24,6 +24,7 @@
             <table class="table mt-4">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>note</th>
                         <th>Action</th>
                     </tr>
@@ -32,6 +33,7 @@
 
                     @foreach ($notes as $item)
                         <tr>
+                             <td>{{$item->id}}</td>
                             <td>{{ $item->note }}</td>
                             <td>
                                 <a href="">Delete</a> | <a href="">Edit</a>
